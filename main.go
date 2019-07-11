@@ -44,7 +44,7 @@ func main() {
 
 	display.SetLUT(false) // a bit dirty , but way faster
 
-	// different effects
+	// different effects, comment to disable
 	for {
 		blinky("LOOK", "AT ME")
 		myNameIs("@conejo")
