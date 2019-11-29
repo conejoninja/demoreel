@@ -47,8 +47,8 @@ func main() {
 	// different effects, comment to disable
 	for {
 		blinky("LOOK", "AT ME")
-		myNameIs("@conejo")
-		talkDate("Thursday, 5PM", "at room 123 build XYZ")
+		myNameIs("@_conejo")
+		talkDate("Sunday, 9:30", "Gingerbread room")
 		sunrays()
 		loading()
 		loadingInverted()
@@ -126,8 +126,8 @@ func talkDate(dateString, roomString string) {
 	display.WaitUntilIdle()
 
 	// top text : Come see my talk on
-	_, w32 := tinyfont.LineWidth(&demoreel.Bold12pt7b, []byte("Come see my talk on"))
-	tinyfont.WriteLine(&display, &demoreel.Regular12pt7b, (w-int16(w32))/2, 28, []byte("Come see my talk on"), black)
+	_, w32 := tinyfont.LineWidth(&demoreel.Bold12pt7b, []byte("HackLab Workshop"))
+	tinyfont.WriteLine(&display, &demoreel.Regular12pt7b, (w-int16(w32))/2, 28, []byte("HackLab Workshop"), black)
 
 	// middle text
 	w32, _ = tinyfont.LineWidth(&demoreel.Bold12pt7b, []byte(dateString))
