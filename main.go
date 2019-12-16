@@ -46,6 +46,7 @@ func main() {
 
 	// different effects, comment to disable
 	for {
+		myNameIs("@_conejo")
 		blinky("LOOK", "AT ME")
 		myNameIs("@_conejo")
 		talkDate("Sunday, 9:30", "Gingerbread room")
@@ -104,7 +105,7 @@ func myNameIs(name string) {
 	tinydraw.FilledRectangle(&display, 0, r, w, 26, black)
 
 	// bottom band
-	tinydraw.FilledRectangle(&display, r, h-r, w-2*r-1, r, black)
+	tinydraw.FilledRectangle(&display, r, h-r-1, w-2*r-1, r+1, black)
 	tinydraw.FilledRectangle(&display, 0, h-2*r-1, w, r, black)
 
 	// top text : my NAME is
@@ -115,9 +116,12 @@ func myNameIs(name string) {
 	w32, _ = tinyfont.LineWidth(&demoreel.Bold12pt7b, []byte(name))
 	tinyfont.WriteLine(&display, &demoreel.Bold12pt7b, (w-int16(w32))/2, 74, []byte(name), black)
 
+	tinyfont.WriteLine(&display, &demoreel.Regular58pt, (w-int16(w32))/2-44, 86, []byte("B"), black)
+	tinyfont.WriteLine(&display, &demoreel.Regular58pt, w-40, 100, []byte("F"), black)
+
 	display.Display()
 	display.WaitUntilIdle()
-	time.Sleep(5 * time.Second)
+	time.Sleep(50 * time.Second)
 }
 
 func talkDate(dateString, roomString string) {
