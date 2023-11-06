@@ -5,7 +5,7 @@ import (
 
 	"math/rand"
 
-	"github.com/conejoninja/tinydraw"
+	"tinygo.org/x/tinydraw"
 	"tinygo.org/x/drivers"
 )
 
