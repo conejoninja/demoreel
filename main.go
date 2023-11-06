@@ -10,7 +10,7 @@ import (
 	"math/rand"
 
 	"github.com/conejoninja/demoreel/tetris"
-	"github.com/conejoninja/tinydraw"
+	"tinygo.org/x/tinydraw"
 	"github.com/conejoninja/tinyfont"
 	"github.com/conejoninja/tinyfont/demoreel"
 	"tinygo.org/x/drivers/waveshare-epd/epd2in13"
@@ -29,7 +29,7 @@ func main() {
 		Frequency: 4000000,
 		Mode:      0,
 		SCK:       machine.EPD_SCK_PIN,
-		MOSI:      machine.EPD_MOSI_PIN,
+		SDO:       machine.EPD_SDO_PIN,
 	})
 
 	display = epd2in13.New(machine.SPI0, machine.EPD_CS_PIN, machine.EPD_DC_PIN, machine.EPD_RESET_PIN, machine.EPD_BUSY_PIN)
